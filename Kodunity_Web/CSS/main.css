@@ -1,0 +1,1630 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #c31432;  /* fallback for old browsers */
+    background: linear-gradient(to right, #240b36, #c31432); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+section.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.checkbox {
+    display: none;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 10;
+    background: #040926;
+  }
+  
+  .header-container {
+    width: 90%;
+    position: relative;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-container p{
+    text-align: center;
+    margin: 1px 0 0 0; 
+    color: #fff; 
+  }
+  .btn-label {
+    width: 2rem;
+    height: 1.4rem;
+  }
+  div.header-button {
+    width: 2rem;
+    height: 0.2rem;
+    background: #fff;
+    position: absolute;
+    top: 0.3rem;  
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .header-button::before,
+  .header-button::after {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    background: #fff;
+    position: absolute;
+    top: -0.6rem;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .header-button::after {
+    top: 0.6rem;
+  }
+  nav.menu {
+    background: #040926;
+    color: #fff;
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    z-index: 9;
+    top: -100%;
+    text-align: center;
+    padding-top: 2.2rem;
+    transition: all 1s;
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    margin: 0.5rem;
+  }
+  a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover{
+    background: #C40010;
+  }
+  .checkbox:checked ~ .menu {
+    background: #040926;
+    top: 0rem;
+  }
+  .checkbox:checked + header .header-container label .header-button {
+    background: none;
+  }
+  .checkbox:checked + header .header-container label .header-button::before {
+    transform: rotate(35deg);
+    top: 0;
+  }
+  .checkbox:checked + header .header-container label .header-button::after {
+    transform: rotate(-35deg);
+    top: 0;
+  }
+nav{
+    width: 100%;
+    height: 50px;
+    padding: 20px 0;
+}
+nav  ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    height: 50px;
+}
+nav ul li{
+    float: left;
+    margin-right: 30px;
+    display: flex;
+    font-size: 2rem;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 5px;
+    cursor: pointer;
+}
+nav a:hover{
+    background: #C40010;
+    height: 40px;
+    border-radius: 10px;
+}
+section.acercade{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    transform: skewY(-10deg);
+}
+section.acercade img,
+h1.title,
+div.portada,
+div.btn{
+    transform: skewY(10deg);
+}
+h1.title{
+    color: #fff;
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+section.acercade img{
+    width: 120px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+div.portada p{
+    width: 70%;
+    margin: 0 auto;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    height: 600px;
+}
+div.btn{
+margin: 30px auto;
+position: relative;
+}
+div.btn button{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background: #C40010;
+    cursor: pointer;
+}
+div.btn a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+}
+section.proyectos-web{
+    transform: skewY(-10deg);
+    background: #240b36;
+    margin-top: 30px;
+}
+div.proyectos h1,
+div.proyectos img{
+    transform: skewY(10deg);
+}
+div.proyectos h1{
+    margin-top: 20px;
+}
+div.container{
+    width: 50%;
+    min-width: 590px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 460px;
+}
+div.content{
+    width: 100%;
+    height: 300px;
+    margin-top: 80px;
+    padding: 30px 30px 50px;
+    background: linear-gradient(400deg , #880D1E, #C40010);
+    border:  2px solid rgba(0, 0 , 0, 0.6);
+    border-radius: 20px;
+    box-shadow:  0 20px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter:  blur(10px);
+}
+div.skills{
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 0 0;
+    display: flex;
+}
+div.content h1{
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+}
+div.details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:  5px 0;
+}
+div.menu{
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.menu div{
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background: #040926;
+}
+#html-menu{
+    animation: html-barra 2s forwards;
+}
+@keyframes html-barra{
+    100%{
+        width: 98%;
+    }
+}
+#css-menu{
+    animation: css-barra 2s forwards;
+}
+@keyframes css-barra{
+    100%{
+        width: 98%;
+    }
+}
+#javascript-menu{
+    animation: javascript-barra 2s forwards;
+}
+@keyframes javascript-barra{
+    100%{
+        width: 60%;
+    }
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    width: 70%;
+    height: auto;
+    margin: 320px auto;
+    transform: skewY(10deg);
+    background: #240b36;
+}
+div.p1,
+div.p2,
+div.p3{
+        width: 100%;
+        height: 340px;
+        text-align: center;
+        font-size: 1.8em;
+        transform: skewY(-10deg);
+}
+div.p3{
+    margin: -50px 0 -300px 0;
+}
+div.p3 h2{
+    font-size: inherit;
+}
+div.contenido{
+    width: 100%;
+    height: auto;
+}
+div.contenido p,
+div.contenido h1{
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+div.contenido ul{
+    color: #fff;
+    list-style: circle;
+}
+div.contenido li::marker{
+    color: #fff;
+}
+section.Clips{
+    width: 100%;
+    height: auto;
+}
+footer{
+    width: 100%;
+    height: 360px;
+    text-align: center;
+    background: #040926;
+    color: #fff;
+    bottom: 0;
+    top: 100%;
+    position: relative;
+}
+footer h1{
+    padding: 20px 0 0 0;
+}
+input.email{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    background: #590925;
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+}
+input.boton{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    background: #590925;
+    cursor: pointer;
+}
+div.redes{
+    padding:  20px 0;
+}
+div.redes a{
+    color: #fff;
+    margin: 0 10px 0 0;
+}
+footer img{
+    width: 40px;
+}
+footer a{
+text-decoration: none;    
+color: yellow;
+}
+div.diseño span a{
+    color: yellow;
+}
+.btnScrollToTop{
+    color: #fff;
+    border-radius: 20px;
+    background: #000;
+    width: 30px;
+    float: right;
+    margin: -100px 20px 0 0;
+}
+div.creacion,
+div.testimonios{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+   
+@media screen and (min-width: 320px){
+    header,
+    div.header-container{
+        width: 320px;
+       
+    }
+    label.btn-label{
+        margin-right: 10px;
+        
+    }
+    nav.menu{
+        width: 320px;
+        height: 330px;
+        top: -700px;
+        left: -900px;
+        transition: all 1s ease;
+        text-align: center;
+    }
+    nav.menu ul{
+        margin: 110px 0 0 10px;
+    }
+    nav.menu li{
+        text-align: center;
+    }
+    .checkbox:checked ~ nav.menu{
+        top: 0;
+        left: 0;
+        width: 320px;
+        height: 340px;
+        text-align: center;
+    }
+    ul{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 320px;
+        margin-top: 120px;
+    }
+    li{
+        justify-content: center;
+        text-align: center;
+    }
+    a{
+        font-size: 25px;
+    }
+    h1.title{
+        font-size: 1.2em;
+    }
+    section.acercade{
+        height: 830px;
+    }
+    div.portada{
+        height: 470px;
+    }
+    div.portada p,
+    div.p1,
+    div.p2,
+    div.p3{
+        width: 320px;
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    div.btn{
+        margin: 20px auto;
+    }
+    aside{
+        width: 100%;
+        height: 860px;
+        margin-top: 340px;
+        margin-bottom: 40px;
+    }
+    div.p2 h2{
+        margin: -40px 0 0 0;
+    }
+    div.p1,
+    div.p2{
+        text-align: center;
+    }
+    div.p3{
+        margin: -80px 0 -400px 0;
+    }
+    div.p3 h2{
+    font-size: 1.2em;
+    }
+    section.proyectos-web{
+        margin-top: -50px;
+        height: 885px;
+    }
+    div.proyectos{
+        margin-top: 20px;
+        width: 320px;
+        height: 350px;
+    }
+    div.proyectos h1{
+        color: #fff;
+        font-size: 20px;
+        width: 300px;
+        margin: 0 0 15px 15px;
+        text-align: center;
+    }
+    div.proyectos img{
+        width: 250px;
+        height: 250px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+    }
+    div.container{
+        margin-top: -290px;
+    }
+    div.content{
+        width: 310px;
+        margin: 0 auto;
+    }
+    
+    div.contenido{
+        margin-top: 60px;
+        height: auto;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    div.contenido span{
+        margin-left: -30px;
+    }
+    div.contenido ul{
+        margin: -10px 0 20px 20px;
+        text-align: center;
+        list-style: circle;
+    }
+    div.contenido li{
+        width: 250px;
+    }
+    section.Clips{
+        width: 320px;
+        height: 4480px;
+        margin: 50px 0 0 0;
+        padding: 0 10px;
+    }
+    div.Videos{
+        width: 320px;
+    }
+    footer{
+        height: 370px;
+    }
+    footer h1,
+    footer h2,
+    footer a{
+        font-size: 20px;
+        margin-top: -5px;
+    }
+    footer img{
+        width: 30px;
+    }
+    a.btnScrollToTop{
+        margin-top: -180px;
+    }
+    div.diseño span a{
+        margin-left: -1px;
+    }
+    section.content-projects,
+    div.projects{
+        width: 320px;
+        height: 1000px;
+    }
+    section.content-projects{
+        margin-top: 60px;
+    }
+    div.projects h1{
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    div.projects img{
+        width: 250px;
+        height: 300px;
+        margin: 0 0 10px 35px;
+    }
+    section.content-testimonios,
+    div.testimonios{
+        width: 320px;
+        height: 400px;
+    }
+}
+ 
+@media screen and (min-width: 375px){
+    header{
+        width: 375px;
+    }
+    nav.menu{
+        width: 375px;
+        height: 330px;
+        top: -700px;
+        left: -900px;
+        transition: all 2s ease;
+        text-align: center;
+    }
+    nav.menu ul{
+        margin: 110px 0 0 15px;
+    }
+    nav.menu li{
+        text-align: center;
+    }
+    .checkbox:checked ~ nav.menu{
+        top: 0;
+        left: 0;
+        width: 375px;
+        height: 340px;
+        text-align: center;
+    }
+    label.btn-label{
+        margin-right: -20px;
+    }
+    section.acercade{
+        height: 785px;
+    }
+    div.portada{
+        height: 420px;
+    }
+    div.portada p{
+        width: 375px;
+        height: 420px;
+        padding: 0 15px;
+    }
+    div.btn{
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
+    section.proyectos-web{
+        margin-top: -70px;
+        height: 890px;
+    }
+    div.proyectos{
+        width: 375px;
+        height: 800px;
+        margin-top: 5px;
+        margin-bottom: 230px;
+    }
+    div.proyectos h1{
+        margin: 20px auto;
+        text-align: center;
+    }
+    div.proyectos img{
+        width: 240px;
+        margin: 0 0 20px 65px;
+    }
+    div.container{
+        width: 375px;
+        margin-top: -280px;
+        margin-bottom: -100px;
+    }
+    div.content{
+        width: 330px;
+        position: relative;
+        backdrop-filter: none;
+    }
+    aside{
+        width: 375px;
+        height: 800px;
+        margin-top: 440px;
+    }
+    div.p1{
+        width: 375px;
+        height: 285px;
+        text-align: center;
+        margin: -10px auto;
+        padding: 20px;
+    }
+    div.p2{
+        width: 375px;
+        height: 290px;
+        text-align: center;
+        margin: 50px auto;
+        padding: 0 30px;
+    }
+    div.p3{
+        width: 375px;
+        margin: -120px auto;
+        padding: 20px;
+    }
+    div.p3 h2{
+        font-size: 20px;
+    }
+    div.contenido{
+        width: 375px;
+        margin-top: 60px;
+        height: auto;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    div.contenido ul{
+        text-align: center;
+        height: 250px;
+    }
+    div.contenido li{
+        margin-left: 30px;
+    }
+    section.Clips{
+        width: 375px;
+        height: 4490px;
+        margin-left: 30px;
+    }
+    footer{
+        height: 350px;
+    }
+    a.btnScrollToTop{
+        margin-top: -160px;
+    }
+    section.content-projects,
+    div.projects,
+    section.content-testimonios,
+    div.testimonios{
+        width: 375px;
+    }
+    div.projects img{
+        margin-left: 60px;
+    }
+    }
+
+@media screen and (min-width: 412px){
+    header{
+         width: 412px;
+    }
+    .header-container p{
+        margin-left: -40px;
+    }
+    nav.menu{
+        width: 412px;
+        height: 330px;
+        top: -700px;
+        left: -900px;
+        transition: all 2s ease;
+        text-align: center;
+    }
+    nav.menu ul{
+        margin: 110px 0 0 10px;
+    }
+    nav.menu li{
+        text-align: center;
+    }
+    .checkbox:checked ~ nav.menu{
+        top: 0;
+        left: 0;
+        width: 412px;
+        height: 340px;
+        text-align: center;
+    }
+    label.btn-label{
+        margin-right: -40px;
+    }
+    div.proyectos{
+        width: 412px;
+        height: 370px;
+    }
+    div.proyectos h1{
+        text-align: center;
+    }
+    div.proyectos img{
+        width: 250px;
+        margin-left: 80px;
+    }
+    aside{
+        width: 412px;
+        height: 820px;
+    }
+    div.contenido{
+        width: 412px;
+        height: auto;
+    }
+    div.contenido ul{
+        margin-left: 40px;
+        height: 250px;
+    }
+    section.Clips{
+        width: 412px;
+        height: 2330px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0 5px;
+        margin: 50px 0 0 0;
+        padding: 0 5px;
+    }
+    div.Videos{
+        width: 412px;
+    }
+     iframe{
+        margin: 0;
+        width: 200px;
+    }
+    footer{
+        height: 350px;
+    }
+    div.diseño span a{
+        margin-left: 2px;
+    }
+    section.content-projects,
+    div.projects,
+    section.content-testimonios,
+    div.testimonios{
+        width: 412px;
+    }
+    div.projects img{
+        margin-left: 80px;
+    }
+    div.p1{
+        height: 298px;
+    }
+    div.p2{
+        margin-top: 50px;
+    }
+    div.p3{
+        margin-top: -110px;
+    }
+    }
+    @media screen and (min-width: 480px){
+     header,
+     div.header-container{
+        width: 480px;
+     }
+     .header-container p{
+        margin: 0;
+        width: 120px;
+     }
+     label.btn-label{
+        margin: 0 10px 0 0;
+     }
+     nav#menu.menu,
+     .checkbox:checked ~ nav.menu{
+        width: 480px;
+     }
+     div.portada,
+     div.portada p{
+        width: 480px;
+        height: 300px;
+     }
+     section.acercade{
+        height: 670px;
+     }
+     aside,
+     div.proyectos{
+        width: 480px;
+     }
+     section.proyectos-web{
+        width: 680px;
+        height: 350px;
+        margin-top: -92px;
+     }
+     div.proyectos{
+        margin-top: -10px;
+     }
+     div.proyectos img{
+        width: 150px;
+        margin: 20px 0 0 5px;
+     }
+     div.content{
+        margin-top: 40px;
+        width: 400px;
+     }
+     div.p2{
+         margin-top: 40px;
+     }
+     div.p3{
+        margin-top: -110px;
+     }
+     div.contenido,
+     div.contenido ul,
+     div.contenido span{
+        width: 480px;
+     }
+     div.contenido ul{
+        text-align: center;
+        margin-left: 80px;
+     }
+     section.content-projects,
+     div.projects,
+     section.content-testimonios,
+     div.testimonios{
+        width: 480px;
+        height: 370px;
+     }
+     div.projects img{
+        width: 150px;
+        margin: 0 0 0 5px;
+     }
+     section.Clips,
+     div.Videos{
+        width: 480px;
+        height: 2400px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+     }
+     div.Videos iframe{
+        width: 225px;
+        margin-left: 2px;
+     }
+     }
+     @media screen and (min-width: 600px){
+        header,
+        div.header-container{
+            width: 600px;
+        }
+        div.header-container p{
+            width: 120px;
+        }
+        nav.menu,
+        nav#menu.menu,
+        .checkbox:checked ~ nav.menu{
+            width: 600px;
+        }
+        label.btn-label{
+            margin-left: 430px;
+        }
+        section.acercade{
+            height: 600px;
+        }
+        div.contenido{
+            width: 600px;
+        }
+        div.contenido p{
+            font-size: 1.2em;
+        }
+        div.contenido ul{
+            margin-left: 140px;
+        }
+        div.portada{
+            width: 600px;
+            height: 280px;
+        }
+        div.portada p{
+            width: 600px;
+            height: 300px;
+        }
+        div.btn button{
+            margin-top: -200px;
+        }
+        section.content-projects,
+        div.projects,
+        section.content-testimonios,
+        div.testimonios{
+            width: 600px;
+        }
+        div.projects{
+            margin-left: 10px;
+        }
+        div.projects img{
+            width: 190px;
+            margin: 0;
+        }
+        section.proyectos-web,
+        div.proyectos{
+            width: 600px;
+        }
+        section.proyectos-web{
+            margin-top: -30px;
+        }
+        div.proyectos img{
+            width: 190px;
+        }
+        aside{
+            width: 600px;
+            height: 580px;
+        }
+        div.p1,
+        div.p2,
+        div.p3{
+            width: 600px;
+        }
+        div.p2{
+            margin-top: -20px;
+        }
+        div.p3{
+            margin-top: -210px;
+        }
+        section.Clips,
+        div.Videos{
+            width: 600px;
+            height: 1600px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        div.Videos iframe{
+            width: 190px;
+            margin: 0;
+        }
+        }
+@media screen and (min-width: 768px){
+    header,div.header-container{
+         width: 768px;
+    }
+    div.header-container p{
+        margin-left: -5px;
+    }
+    label.btn-label{
+        margin-left: 410px;
+    }
+    nav#menu.menu,
+    nav.menu{
+        width: 768px;
+    }
+    nav.menu ul{
+        margin-left: 10px;
+    }
+    .checkbox:checked ~ nav.menu{
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        width: 768px;
+        height: 340px;
+        text-align: center;
+    }
+    section.acercade{
+        width: 768px;
+        height: 900px;
+    }
+    section.acercade img{
+        width: 200px;
+        border-radius: 50%;
+    }
+    div.portada{
+        width: 768px;
+        height: 250px;
+    }
+    div.portada p{
+        width: 768px;
+        font-size: 1.5em;
+    }
+    div.btn button{
+        width: 200px;
+        margin-top: 200px;
+        font-size: 1.2em;
+    }
+    section.proyectos-web{
+        width: 768px;
+        margin-top: -67px;
+        height: 550px;
+    }
+    div.proyectos{
+        width: 768px;
+        height: 535px;
+        margin: 50px 0 250px 9px;
+    }
+    div.proyectos h1{
+        text-align: center;
+    }
+    div.proyectos img{
+        width: 240px;
+        height: 400px;
+    }
+    div.container,
+    div.content{
+        width: 750px;
+        margin-top: -160px;
+        margin-bottom: -5px;
+        backdrop-filter: none;
+    }
+    aside{
+        width: 768px;
+        height:910px;
+        margin-top: 470px;
+        margin-bottom: 70px;
+    }
+    div.p1,
+    div.p2,
+    div.p3{
+        width: 768px;
+    }
+    div.p2{
+        margin-top: 60px;
+    }
+    div.p1 p,
+    div.p2 p,
+    div.p3 p{
+        font-size: 1.5em;
+    }
+    
+    div.p3{
+        margin-top: -110px;
+    }
+    div.p1 h2,
+    div.p2 h2,
+    div.p3 h2{
+        font-size: 1.8em;
+    }
+    div.contenido{
+        width: 768px;
+        height: auto;
+    }
+    div.contenido ul{
+        width: 768px;
+        height: 280px;
+        margin-left: 190px;
+        font-size: 1.2em;
+    }
+    div.contenido li{
+        width: 300px;
+    }
+    div.contenido span{
+        width: 20px;
+    }
+    section.Clips{
+        height: 1620px;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 50px 0 0 25px;
+    }
+    div.Videos{
+        width: 768px;
+    }
+    footer{
+        font-size: 1.5em;
+        height: 380px;
+    }
+    footer h1,
+    footer h2{
+        font-size: 1.2em;
+    }
+    input.email,
+    input.boton{
+        width: 300px;
+    }
+    a.btnScrollToTop{
+        margin-top: -189px;
+    }
+    section.content-projects,
+    div.projects,
+    section.content-testimonios,
+    div.testimonios{
+        width: 768px;
+    }
+    section.content-projects{
+        height: 700px;
+    }
+    div.projects img{
+        width: 300px;
+        margin-left: 60px;
+    }
+}
+@media screen and (min-width: 800px){
+    header{
+        width: 800px;
+    }
+    nav.menu{
+        width: 800px !important;
+    }
+    div.header-container p{
+        margin-left: -18px;
+    }
+    label.btn-label{
+     margin-right: -5px;   
+    }
+    section.proyectos-web{
+        width: 800px;
+    }
+    div.portada{
+        width: 800px;
+    }
+    div.btn button{
+        margin-left: 30px;
+    }
+    aside{
+        width: 750px;
+    }
+    div.proyectos{
+        margin-left: 25px;
+    }
+    div.content{
+        width: 700px;
+        height: 300px;
+    }
+    aside{
+        width: 800px;
+        height: 900px;
+        margin-bottom: 80px;
+    }
+    div.p1{
+        margin-top: 20px;
+    }
+    div.p2{
+        margin-top: 60px;
+    }
+    section.Clips{
+        width: 800px;
+        height: 1620px;
+    }
+    div.Videos{
+        width: 800px;
+        margin-left: 10px;
+    }
+} 
+@media screen and (min-width: 1024px){
+    header{
+        display: none;
+    }
+    label.btn-label{
+        display: none;
+    }
+    nav.menu{
+        background: none;
+        width: 1024px !important;
+        height: 340px;
+        text-align: center;
+        top: -40px;
+        left: 0;
+        bottom: 30px;
+        right: 0;
+        position: relative;
+    }
+    ul{
+        width: 1024px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0 0 0 135px;
+    }
+    ul li a{
+        font-size: 28px;
+    }
+    section.acercade{
+        width: 1024px;
+        margin-top: -200px;
+    }
+    div.portada,
+    div.portada p{
+        width: 1024px;
+        height: 400px;
+        font-size: 1.3em;
+    }
+    div.btn{
+        font-size: 1.5em;
+        height: 50px;
+        margin-top: -180px;
+    }
+    section.proyectos-web{
+        width: 1024px;
+        height: 670px;
+        margin-top: -108px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    div.proyectos{
+        width: 1024px;
+        height: 665px;
+        margin-left: -10px;
+    }
+    div.proyectos h1{
+        text-align: center;
+        font-size: 2em;
+        margin-top: -30px;
+    }
+    div.proyectos img{
+        width: 300px;
+        height: 500px;
+        margin: 50px 5px 0 30px;
+        backdrop-filter: none;
+    }
+    div.content,
+    div.container{
+        width: 800px;
+    }
+    div.content{
+        height: 400px;
+        margin: -70px 0;
+    }
+    div.skills{
+        font-size: 1.8em;
+    }
+    aside{
+        width: 1024px;
+        height: 950px;
+        margin-top: 500px;
+        margin-bottom: 100px;
+    }
+    div.p1{
+        margin: 0 auto;
+        width: 1024px;
+        font-size: 1.2em;
+    }
+    div.p2{
+        width: 1024px;
+        font-size: 1.2em;
+        margin: 60px 0 10px 0;
+    }
+    div.p3{
+        width: 1024px;
+        font-size: 1.2em;
+        margin: -60px  0 0 0;
+    }
+    div.contenido{
+        margin-top: -50px;
+        width: 1024px;
+        height: 1700px;
+        font-size: 1.2em;
+    }
+    div.contenido ul{
+        margin-left: 230px;
+        width: 100%;
+        height: 430px;
+    }
+    div.contenido li{
+        width: 500px;
+    }
+    section.Clips{
+        width: 1024px;
+        height: 1570px;
+        margin: -130px 0 0 0;
+        padding: 0;
+        display: grid;
+    }
+    div.Videos{
+        grid-template-columns: repeat(4, 1fr);
+        width: 1024px;
+        margin: 0 0 0 3px;
+    }
+    div.Videos iframe{
+        width: 250px;
+        padding: 0 5px;
+    }
+    footer{
+        font-size: 1.8em;
+        height: 460px;
+    }
+    footer a{
+        text-decoration: none;
+    }
+    footer img{
+        width: 50px;
+        height: 50px;
+    }
+    footer span a{
+        font-size: 1em;
+        margin-left: -2px;
+    }
+    a.btnScrollToTop{
+        width: 40px;
+        height: 40px;
+        margin-top: -265px;
+        text-align: center;
+        scroll-behavior: smooth;
+    }
+    span.material-icons{
+        font-size: 30px;
+    }
+    section.content-projects,
+    div.projects,
+    section.content-testimonios,
+    div.testimonios{
+        width: 1024px;
+    }
+    section.content-projects{
+        margin-top: -100px;
+        height: 380px;
+    }
+    div.projects{
+        margin-left: 15px;
+    }
+    div.projects img{
+        margin: 0 20px 0 10px;
+    }
+    }
+    
+    @media screen and (min-width: 1366px){
+        header{
+            display: none;
+        }
+        nav.menu{
+            position: relative;
+            background: none;
+            left: 170px;
+            }
+            ul{
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                margin-left: 290px;
+            }
+            div.btn{
+                margin: 0 0 30px 0;
+            }
+            section.acercade{
+                width: 1366px;
+                height: 750px;
+            }
+            div.portada,
+            div.portada p{
+                width: 1366px;
+                height: 400px;
+            }
+            div.btn{
+                margin-top: -250px;
+            }
+            section.proyectos-web{
+                width: 1366px;
+                height: 750px;
+                margin-top: -27px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            div.proyectos{
+                width: 1366px;
+                height: 900px;
+                margin: -30px 0 0 20px;
+            }
+            div.proyectos h1{
+                color: #fff;
+                text-align: center;
+                margin-top: 60px;
+                width: 1366px;
+            }
+            div.proyectos img{
+                width: 400px;
+                height: 500px;
+                margin: 80px 0 0 30px;
+                backdrop-filter: none;
+            }
+            div.container{
+                margin: 230px 0 -500px 80px;
+                height: 400px;
+            }
+            div.content{
+                width: 700px;
+                height: 400px;
+                margin: -420px 0 0 0;
+            }
+            aside{
+                height: 950px;
+                width: 100%;
+                margin-top: 420px;
+                margin-bottom: 130px;
+            }
+            div.p1,
+            div.p2,
+            div.p3{
+                width: 1366px;
+            }
+            div.p1{
+                margin: 60px 0 0 0;
+                padding: 0 40px;
+                font-size: 1.5em;
+            }
+            div.p2{
+                margin-top: 30px;
+                font-size: 1.5em;
+            }
+            div.p3{
+                margin-top: -70px;
+                font-size: 1.5em;
+            }
+            div.p1 p,
+            div.p1 h2,
+            div.p2 p,
+            div.p2 h2,
+            div.p3 h2,
+            div.p3 p{
+                font-size: 1.3em;
+            }
+            div.contenido{
+                margin-top: -80px;
+                width: 1366px;
+                height: 1500px;
+                font-size: 1.2em;
+                padding: 0 20px;
+            }
+            div.contenido ul{
+                margin-left: 390px;
+                width: 200px;
+                height: 200px;
+            }
+            div.contenido li{
+                width: 500px;
+            }
+            section.Clips{
+                width: 1366px;
+                height: 1360px;
+                margin-top: -120px;
+                padding: 0;
+                display: grid;
+            }
+            div.Videos{
+                width: 1366px;
+                height: 1000px;
+                margin-left: 50px;
+                padding: 0;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            div.Videos iframe{
+                width: 300px;
+                margin: 0 0 20px -30px;
+                padding: 0;
+            }
+            iframe{
+                width: 300px;
+                padding:  10px 0;
+            }
+            footer{
+                height: 450px;
+            }
+            footer a{
+                text-decoration: none;
+            }
+            footer span a{
+                font-size: 30px;
+                text-decoration: none;
+            }
+            div.projects{
+                width: 100%;
+                height: 600px;
+                margin-left: 25px;
+            }
+            div.projects h1{
+                text-align: center;
+                width: 1366px;
+            }
+            div.projects img{
+                width: 455px;
+                height: 500px;
+                margin: 0;
+            }
+            section.content-projects,
+            section.content-testimonios,
+            div.testimonios{
+                width: 1366px;
+            }
+            section.content-projects{
+                height: 600px;
+            }
+            div.projects h1,
+            div.testimonios h1{
+                font-size: 1.7em;
+            }
+            div.projects img{
+                width: 430px;
+                margin: 0 5px 0 0;
+            }
+            }
+            @media screen and (min-width: 1440px){
+                nav.menu{
+                    margin-left: 40px;
+                }
+                section.acercade{
+                    width: 1440px;
+                    height: 750px;
+                }
+                section.acercade h1{
+                    width: 1440px;
+                }
+                div.portada,
+                div.portada p,
+                div.p1,
+                div.p2,
+                div.p3{
+                    width: 1440px;
+                    margin: 0 auto;
+                    text-align: center;
+                    font-size: 1.4em;
+                }
+                div.portada p{
+                    padding: 0 30px;
+                }
+                section.proyectos-web{
+                    width: 1440px;
+                    height: 820px;
+                    margin-top: 55px;
+                }
+                div.proyectos{
+                    width: 100%;
+                    height: 790px;
+                }
+                div.proyectos img{
+                    width: 425px;
+                    height: 600px;
+                }
+                div.btn button{
+                    height: 50px;
+                    margin-top: 270px;
+                    font-size: 1.2em;
+                    border-radius: 20px;
+                }
+                div.container{
+                    margin-top: 2px;
+                }
+                div.content{
+                    width: 600px;
+                    margin-top: -200px;
+                    margin-left: 30px;
+                }
+                aside{
+                    width: 1440px;
+                    height: 1150px;
+                    margin-top: 620px;
+                }
+                div.p1{
+                    margin-top: 70px;
+                    font-size: 1.5em;
+                }
+                div.p2{
+                    font-size: 1.5em;
+                    margin-top: 70px;
+                }
+                div.p3{
+                    font-size: 1.5em;
+                    margin-top: -20px;
+                }
+                div.contenido{
+                    width: 100%;
+                }
+                div.contenido ul{
+                    margin-left: 420px;
+                }
+                div.contenido li::marker{
+                    color: #fff;
+                }
+                section.Clips{
+                    width: 1440px;
+                    height: 1370px;
+                    margin: -50px 0 0 0;
+                    padding: 0;
+                    grid-template-columns: repeat(5, 1fr);
+                }
+                div.Videos{
+                    width: 1440px;
+                    margin: 0 0 0 60px;
+                    padding: 0;
+                }
+                iframe{
+                    width: 250px;
+                }
+                section.content-projects,
+                div.projects,
+                section.content-testimonios,
+                div.testimonios{
+                    width: 1440px;
+                }
+                section.content-projects{
+                    height: 600px;
+                }
+                div.projects{
+                    margin-left: 35px;
+                }
+                div.projects img{
+                    width: 450px;
+                }
+                a.btnScrollToTop{
+                    margin-left: -30px;
+                }
+            }
